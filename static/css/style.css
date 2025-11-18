@@ -1,0 +1,477 @@
+/* ---------- NOVA CITY LANDING ---------- */
+
+/* Hero full-width, rompe el container */
+
+body.site {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.95);   /* antes era 15,23,42 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+}
+
+.site-header h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.site-header nav a {
+  color: #a5b4fc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive header: stack title + nav on small screens */
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;.projects-section {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e5e7eb;
+  background-color: #0f172a;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.7);
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: linear-gradient(to right, #3b82f6, #22d3ee);
+  color: #f9fafb;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.4);
+}
+
+.project-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 20px 45px rgba(6, 182, 212, 0.55);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .projects-list {
+    gap: 0.75rem;
+  }
+
+  .project-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
+    padding: 0.5rem 1rem;
+  }
+
+  .site-header h1 {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .site-header nav {
+    width: 100%;
+    padding: 0 0 0.75rem 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .site-header nav a {
+    display: inline-block;
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+.nova-hero {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  min-height: 70vh;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.3)),
+    url("https://images.pexels.com/photos/8107940/pexels-photo-8107940.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.nova-hero-layer {
+  width: 100%;
+  padding: 4rem 0 3rem 0;
+}
+
+.nova-hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  /* NUEVO: centra el contenido horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nova-hero-content {
+  max-width: 460px;
+
+  /* Opcional: centra el texto también */
+  text-align: center;
+}
+
+.nova-eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #a5b4fc;
+  margin-bottom: 0.4rem;
+}
+
+.nova-hero-content h2 {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+.nova-subtitle {
+  font-size: 1rem;
+  color: #e5e7eb;
+  margin-bottom: 1.25rem;
+}
+
+/* Botón principal */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(to right, #3b82f6, #22d3ee);
+  color: #f9fafb;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.4);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 20px 45px rgba(6, 182, 212, 0.55);
+}
+
+/* Sección de abajo tipo “Live the Story” */
+.nova-section {
+  padding: 3rem 0 3.5rem 0;
+  background: #020617;
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+  margin-top: 0;
+}
+
+.nova-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.nova-image-card {
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  border-radius: 1.25rem;
+  padding: 0.6rem;
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(31, 41, 55, 0.9);
+}
+
+.nova-image-card img {
+  width: 100%;
+.project-thumb {
+  display: block;
+  width: auto;       /* o puedes usar width: 100%; si quieres que se ajuste al contenedor */
+  height: auto;      /* para mantener la proporción */
+  max-width: 100%;   /* para que no se salga del contenedor */
+  object-fit: contain; /* para que la imagen se ajuste sin recortar */
+}  display: block;
+  border-radius: 1rem;
+}
+
+.nova-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.nova-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.nova-feature-item h4 {
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+  color: #e5e7eb;
+}
+
+.nova-feature-item p {
+  font-size: 0.96rem;
+  color: #cbd5f5;
+  line-height: 1.7;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .nova-hero {
+    min-height: 60vh;
+  }
+
+  .nova-hero-layer {
+    padding: 3rem 0 2.5rem 0;
+  }
+
+  .nova-hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .nova-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nova-image-card {
+    order: -1; /* Imagen arriba en móvil */
+  }
+}
+
+/* ---------- Projects section (Cyberpunk Neon) ---------- */
+
+.projects-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.projects-header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.projects-header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f5f5ff;
+}
+
+.projects-header p {
+  margin-top: 0.6rem;
+  color: #9ca4ff;
+  font-size: 0.95rem;
+  max-width: 420px;
+}
+
+/* Grid layout */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Card base */
+
+.project-card {
+  position: relative;
+  background: radial-gradient(circle at top left, rgba(120, 70, 255, 0.2), rgba(10, 10, 26, 0.98));
+  border: 1px solid rgba(120, 120, 255, 0.4);
+  border-radius: 18px;
+  padding: 1.4rem 1.4rem 1.6rem;
+  overflow: hidden;
+  box-shadow:
+    0 0 18px rgba(82, 139, 255, 0.25),
+    0 18px 35px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.22s ease-out,
+    box-shadow 0.22s ease-out,
+    border-color 0.22s ease-out,
+    background 0.22s ease-out;
+}
+
+/* Glow layer */
+
+.project-glow {
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at top, rgba(120, 180, 255, 0.23), transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-out;
+}
+
+/* Icon chip */
+
+.project-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.8);
+}
+
+.project-icon span {
+  color: #fdfdff;
+}
+
+/* Icon color variants */
+
+.project-icon-purple {
+  background: radial-gradient(circle at 30% 0, #8a5bff, #3c1e91);
+}
+
+.project-icon-cyan {
+  background: radial-gradient(circle at 30% 0, #3cf6ff, #145b7a);
+}
+
+.project-icon-pink {
+  background: radial-gradient(circle at 30% 0, #ff65d9, #7a1657);
+}
+
+/* Text inside card */
+
+.project-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+  color: #f8f4ff;
+}
+
+.project-tagline {
+  font-size: 0.9rem;
+  color: #c7cbff;
+  margin-bottom: 0.6rem;
+}
+
+.project-desc {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #8b93ff;
+  margin-bottom: 1.1rem;
+}
+
+/* Neon button */
+
+.btn-neon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border: 1px solid rgba(120, 255, 220, 0.65);
+  color: #e9fffb;
+  text-decoration: none;
+  background: linear-gradient(90deg, rgba(0, 255, 200, 0.22), rgba(0, 140, 255, 0.22));
+  box-shadow:
+    0 0 12px rgba(0, 255, 200, 0.4),
+    0 0 32px rgba(0, 113, 255, 0.3);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    background 0.18s ease-out,
+    border-color 0.18s ease-out;
+}
+
+/* Hover effects */
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(138, 180, 255, 0.9);
+  background: radial-gradient(circle at top left, rgba(138, 92, 255, 0.32), rgba(6, 10, 30, 0.98));
+  box-shadow:
+    0 0 24px rgba(108, 165, 255, 0.5),
+    0 22px 40px rgba(0, 0, 0, 0.95);
+}
+
+.project-card:hover .project-glow {
+  opacity: 1;
+}
+
+.project-card:hover .btn-neon {
+  transform: translateY(-1px);
+  background: linear-gradient(90deg, rgba(0, 255, 200, 0.35), rgba(0, 140, 255, 0.45));
+  border-color: rgba(180, 255, 240, 0.9);
+  box-shadow:
+    0 0 18px rgba(0, 255, 200, 0.7),
+    0 0 40px rgba(0, 113, 255, 0.5);
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding-top: 3rem;
+  }
+
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+}
+
+

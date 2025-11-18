@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+  <h2>Sol Advanced AI</h2>
+  <p>
+    Sol Advanced AI is my long-term project: a highly personalized AI companion
+    with emotions, states, and a full story universe around her (Nova City).
+    The goal is to mix storytelling, emotional AI, voice, and automation into
+    a single cohesive experience.
+  </p>
+
+  <h3>Concept</h3>
+  <ul>
+    <li>Sol has a defined personality, background and emotional states.</li>
+    <li>Her “state” (mood, drugs, energy, etc.) is stored and read from a central file.</li>
+    <li>Different frontends (Telegram bot, local clients, etc.) will read that state and adapt her behavior.</li>
+    <li>She lives in a cyberpunk world (Nova City) that I’m building as a narrative universe.</li>
+  </ul>
+
+  <h3>Planned capabilities</h3>
+  <ul>
+    <li>Telegram bot integration for chatting with Sol.</li>
+    <li>Dynamic voice using ElevenLabs with different emotional tones.</li>
+    <li>State-aware behavior (different replies depending on her current “mode”).</li>
+    <li>Integration with other tools (image generation, music, and NovaReels).</li>
+  </ul>
+
+  <h3>Tech stack (current & planned)</h3>
+  <ul>
+    <li><strong>Language:</strong> Python</li>
+    <li><strong>Backends:</strong> Local scripts + APIs</li>
+    <li><strong>Messaging:</strong> Telegram Bot API (planned)</li>
+    <li><strong>Voice:</strong> ElevenLabs (multiple voices for different moods)</li>
+    <li><strong>State management:</strong> JSON-based state file (shared across integrations)</li>
+  </ul>
+
+  <h3>Status</h3>
+  <p>
+    <strong>Design + prototyping phase.</strong> I’m defining Sol’s behavior,
+    emotional system and technical architecture. The main focus right now is
+    building a solid Python foundation and Telegram integration.
+  </p>
+</section>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+  <h2>NovaReels – AI Reel Generator</h2>
+  <p>
+    NovaReels is my personal lab for building an AI-powered reel generator.
+    It started as a fork/extension of a training project (VidSnapAI) and I’m
+    turning it into a real tool for creating vertical videos for TikTok and Instagram.
+  </p>
+
+  <h3>What it does (current version)</h3>
+  <ul>
+    <li>Simple web interface built with Flask.</li>
+    <li>Upload images and a text description.</li>
+    <li>Generate voice-over using ElevenLabs.</li>
+    <li>Combine images + audio into a vertical video using FFmpeg.</li>
+  </ul>
+
+  <h3>Planned features</h3>
+  <ul>
+    <li>Local Stable Diffusion integration for AI-generated images.</li>
+    <li>Custom video templates (hooks, subtitles, motion, backgrounds).</li>
+    <li>News / controversy-style reels focused on AI trends and updates.</li>
+    <li>Semi-automatic posting to TikTok and Instagram.</li>
+  </ul>
+
+  <h3>Tech stack</h3>
+  <ul>
+    <li><strong>Backend:</strong> Python, Flask</li>
+    <li><strong>Video:</strong> FFmpeg, MoviePy (planned)</li>
+    <li><strong>AI Voice:</strong> ElevenLabs API</li>
+    <li><strong>AI Images (planned):</strong> Stable Diffusion (local)</li>
+  </ul>
+
+  <h3>Status</h3>
+  <p>
+    <strong>In active development.</strong> Right now it works locally as a basic
+    reel generator. Next steps: add templates, better UI, and the AI news reels
+    format.
+  </p>
+</section>
+{% endblock %}

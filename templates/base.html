@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Comandante RAM – Lab</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="site">
+  <header class="site-header">
+    <h1>Comandante RAM // Nova Lab</h1>
+    <nav>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('projects') }}">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+<style>
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: transparent;
+    font-size: 1.0em;
+    color: #666;
+  }
+</style>
+
+<footer>
+    <p>Built with Python & a bit of insanity.</p>
+</footer>
+  </footer>
+  </body>
+</html>
