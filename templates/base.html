@@ -2,7 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>The Nova City Project 6 by Jober</title>
+  <title>The Nova City Project 6 by Jober</title>{% block content %}
+<style>
+/* ---------- Project thumbnails ---------- */
+.project-thumb-wrapper {
+  position: relative;
+  margin: -0.4rem -0.4rem 0.9rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(140, 167, 255, 0.4);
+  box-shadow:
+    0 0 18px rgba(99, 132, 255, 0.35),
+    0 14px 26px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  aspect-ratio: 16 / 9;      /* mantiene todas las tarjetas iguales */
+  background: #050818;       /* color de fondo detrás de la imagen */
+}
+
+.project-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* muestra la imagen completa */
+  border-radius: 14px;
+}
+
+/* ---------- Neon titles ---------- */
+.projects-header h1 {
+  font-family: "Orbitron", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fdfdff;
+  text-shadow:
+    0 0 8px rgba(120, 200, 255, 0.8),
+    0 0 18px rgba(120, 120, 255, 0.85),
+    0 0 32px rgba(90, 50, 255, 0.9);
+}
+
+.projects-header p {
+  margin-top: 0.8rem;
+  color: #9fb7ff;
+  font-size: 0.95rem;
+}
+
+.project-title-neon {
+  font-family: "Orbitron", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  margin: 0.6rem 0 0.35rem;
+  color: #f7f3ff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 6px rgba(255, 109, 251, 0.8),
+    0 0 15px rgba(94, 197, 255, 0.8);
+}
+
+.project-card:hover .project-title-neon {
+  text-shadow:
+    0 0 10px rgba(255, 150, 255, 1),
+    0 0 24px rgba(120, 210, 255, 1);
+}
+
+.projects-section {
+  transform-origin: top left;
+}
+
+/* Responsive adjustments for smartphones */
+@media (max-width: 600px) {
+  .projects-header h1 {
+    font-size: 1.8rem;
+  }
+  .projects-header p {
+    font-size: 0.85rem;
+  }
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .project-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project-thumb-wrapper {
+    aspect-ratio: auto;
+    height: 180px;
+  }
+  .project-title-neon {
+    font-size: 0.9rem;
+  }
+  .project-tagline, .project-desc {
+    font-size: 0.85rem;
+  }
+  .btn-neon {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+</style>
+
+// ... existing code ...
+
+{% endblock %}
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
