@@ -1,0 +1,266 @@
+/* ========== CONTACT PAGE ENHANCEMENTS ========== */
+
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+.contact-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.contact-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #00ffff, #8a2bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+}
+
+.contact-subtitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    color: #94a3b8;
+    margin-bottom: 5rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-item {
+    background: linear-gradient(145deg, rgba(15, 5, 50, 0.6), rgba(5, 5, 25, 0.8));
+    border: 2px solid rgba(138, 43, 255, 0.3);
+    border-radius: 24px;
+    padding: 2.8rem 3rem;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.contact-item:hover::before {
+    left: 100%;
+}
+
+.contact-item:hover {
+    border-color: #00ffff;
+    box-shadow:
+        0 0 30px rgba(0, 255, 255, 0.4),
+        0 10px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(-8px);
+}
+
+.contact-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #00ffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-value {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.contact-value a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-value a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, #00ffff, #8a2bff);
+    transition: width 0.3s ease;
+}
+
+.contact-value a:hover::after {
+    width: 100%;
+}
+
+.contact-value a:hover {
+    color: #00ffff;
+}
+
+/* Social Media Icons with Original Colors */
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+.social-icon svg {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Instagram - Gradient */
+.social-icon[aria-label="Instagram"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border: 2px solid transparent;
+}
+
+.social-icon[aria-label="Instagram"]:hover {
+    transform: translateY(-8px) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(188, 24, 136, 0.5);
+}
+
+.social-icon[aria-label="Instagram"] svg {
+    color: #ffffff;
+    stroke: #ffffff;
+}
+
+/* TikTok - Black with Pink */
+.social-icon[aria-label="TikTok"] {
+    background: #000000;
+    border: 2px solid #fe2c55;
+}
+
+.social-icon[aria-label="TikTok"]:hover {
+    transform: translateY(-8px) rotate(-5deg);
+    box-shadow:
+        0 0 20px rgba(254, 44, 85, 0.6),
+        0 0 40px rgba(37, 244, 238, 0.4);
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+}
+
+.social-icon[aria-label="TikTok"] svg {
+    color: #fe2c55;
+    fill: #fe2c55;
+}
+
+/* YouTube - Red */
+.social-icon[aria-label="YouTube"] {
+    background: #FF0000;
+    border: 2px solid #FF0000;
+}
+
+.social-icon[aria-label="YouTube"]:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+    background: #cc0000;
+}
+
+.social-icon[aria-label="YouTube"] svg {
+    color: #ffffff;
+    stroke: #ffffff;
+}
+
+/* Discord - Blurple */
+.social-icon[aria-label="Discord"] {
+    background: #5865F2;
+    border: 2px solid #5865F2;
+}
+
+.social-icon[aria-label="Discord"]:hover {
+    transform: translateY(-8px) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(88, 101, 242, 0.5);
+    background: #4752c4;
+}
+
+.social-icon[aria-label="Discord"] svg {
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2.8rem;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .contact-value {
+        font-size: 1.4rem;
+    }
+
+    .contact-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .social-icons {
+        gap: 1.2rem;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}
