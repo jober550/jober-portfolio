@@ -16,7 +16,8 @@ body.site {
   z-index: 20;
   border-bottom: 1px solid rgba(148, 163, 184, 0.25);
   backdrop-filter: blur(14px);
-  background: rgba(0, 0, 0, 0.95);   /* antes era 15,23,42 */
+  background: rgba(0, 0, 0, 0.95);
+  /* antes era 15,23,42 */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,11 +47,34 @@ body.site {
   text-decoration: underline;
 }
 
+/* [FIX] Corrected malformed media query block and nested rules */
 /* Responsive header: stack title + nav on small screens */
 @media (max-width: 700px) {
   .site-header {
     flex-direction: column;
-    align-items: flex-start;.projects-section {
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .site-header h1 {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .site-header nav {
+    width: 100%;
+    padding: 0 0 0.75rem 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .site-header nav a {
+    display: inline-block;
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+.projects-section {
   max-width: 720px;
   margin: 2rem auto;
   padding: 1rem;
@@ -103,26 +127,6 @@ body.site {
   .project-button {
     width: 100%;
     padding: 0.75rem 1rem;
-  }
-}
-    padding: 0.5rem 1rem;
-  }
-
-  .site-header h1 {
-    font-size: 1rem;
-    padding: 0.5rem 0;
-  }
-
-  .site-header nav {
-    width: 100%;
-    padding: 0 0 0.75rem 0;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .site-header nav a {
-    display: inline-block;
-    padding: 0.35rem 0.5rem;
   }
 }
 
@@ -232,16 +236,23 @@ body.site {
   border: 1px solid rgba(31, 41, 55, 0.9);
 }
 
+/* [FIX] Separated nested CSS rules for image card and thumb */
 .nova-image-card img {
   width: 100%;
+  display: block;
+  border-radius: 1rem;
+}
+
 .project-thumb {
   display: block;
-  width: auto;       /* o puedes usar width: 100%; si quieres que se ajuste al contenedor */
-  height: auto;      /* para mantener la proporción */
-  max-width: 100%;   /* para que no se salga del contenedor */
-  object-fit: contain; /* para que la imagen se ajuste sin recortar */
-}  display: block;
-  border-radius: 1rem;
+  width: auto;
+  /* o puedes usar width: 100%; si quieres que se ajuste al contenedor */
+  height: auto;
+  /* para mantener la proporción */
+  max-width: 100%;
+  /* para que no se salga del contenedor */
+  object-fit: contain;
+  /* para que la imagen se ajuste sin recortar */
 }
 
 .nova-text h3 {
@@ -286,7 +297,8 @@ body.site {
   }
 
   .nova-image-card {
-    order: -1; /* Imagen arriba en móvil */
+    order: -1;
+    /* Imagen arriba en móvil */
   }
 }
 
@@ -474,4 +486,13 @@ body.site {
   }
 }
 
-
+/* [REFACTOR] Footer Styles (Moved from base.html) */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background: transparent;
+  font-size: 1.0em;
+  color: #666;
+}
