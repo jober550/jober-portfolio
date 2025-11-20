@@ -213,7 +213,7 @@ body.site {
   box-shadow: 0 20px 45px rgba(6, 182, 212, 0.55);
 }
 
-/* Sección de abajo tipo “Live the Story” */
+/* Sección de abajo tipo "Live the Story" */
 .nova-section {
   padding: 3rem 0 3.5rem 0;
   background: #020617;
@@ -306,7 +306,7 @@ body.site {
 /* ---------- Projects section (Cyberpunk Neon) ---------- */
 
 .projects-section {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 4rem 1.5rem 5rem;
 }
